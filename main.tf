@@ -57,11 +57,17 @@ resource "aws_instance" "my-Terraform-Instance" {
 resource "aws_dynamodb_table" "my-dynamo-db-table-tf" {
   name           = "my-dynamo-db-table-tf"
   billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "Farooq"
-  range_key      = "chintu"
+  hash_key       = "my-hash-key"
+  range_key      = "my-range-key"
+
   attribute {
-    name = "my-attribute"
+    name = "my-hash-key"
     type = "S"
   }
+attribute {
+    name = "my-range-key"
+    type = "N"
+  }
+
 }
 

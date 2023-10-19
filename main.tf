@@ -52,6 +52,19 @@ resource "aws_instance" "my-Terraform-Instance" {
   }
 }
 
+# create s3 bucket
+
+resource "aws_s3_bucket" "my-s3-bucket" {
+  bucket_prefix = var.bucket_prefix
+  acl = var.acl
+  
+   versioning {
+    enabled = var.versioning
+  }
+  
+  tags = var.tags
+}
+
 # create dynamo table
 
 resource "aws_dynamodb_table" "my-dynamo-db-table-tf" {

@@ -51,3 +51,25 @@ resource "aws_instance" "my-Terraform-Instance" {
     Name = var.tag_name
   }
 }
+
+# create dynamo table
+
+resource "aws_dynamodb_table" "my-dynamo-db-table-tf" {
+  name           = "my-dynamo-db-table-tf"
+  billing_mode   = "PAY_PER_REQUEST"
+  read_capacity  = 5
+  write_capacity = 5
+
+  attribute {
+    name = "Farooq"
+    type = "S"
+  }
+
+  attribute {
+    name = "chintu"
+    type = "N"
+  }
+
+  hash_key = "Farooq"
+  range_key = "chintu"
+}

@@ -34,7 +34,7 @@ variable "versioning" {
 variable "acl" {
     type        = string
     description = " Defaults to private "
-    default     = "public"
+    default     = "private"
 }
 variable "bucket_prefix" {
     type        = string

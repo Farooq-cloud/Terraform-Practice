@@ -44,5 +44,3 @@ resource "aws_security_group" "Terraform-sg-2023"{
     Name = var.security_group
   }
 }
-
-}

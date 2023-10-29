@@ -2,6 +2,14 @@ provider "aws" {
     region = "ap-south1"
 } 
 
+resource "aws_vpc" "main" {
+  cidr_block = "172.16.0.0/16"
+  instance_tenancy = "default"
+  tags = {
+    Name = "main"
+  }
+}
+
 resource "aws_instance" "my-terraform-insatnce" {
 ami = var.ami_id
 key_name = var.key_name

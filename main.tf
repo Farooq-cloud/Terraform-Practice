@@ -11,6 +11,7 @@ tags = {
     Name = "my-Terraform-Instance"
     Environment = "DEV"
 }
+tag_name = my-Terraform-Instance
 ami_id = ami-0f5ee92e2d63afc18
 acl = private
 bucket_prefix = my-statefile-backup

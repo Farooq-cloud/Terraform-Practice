@@ -27,10 +27,5 @@ dynamodb_range_key = var.dynamodb_range_key
 dynamodb_attributes = var.dynamodb_attributes
 }
 
-module "tags" {
-  source = "./tags"
-  tags = var.tags
-}
-
 
 

@@ -18,9 +18,6 @@ dynamodb_hash_key = my-hash-key
 dynamodb_range_key = my-range-key
 dynamodb_attributes = dynamodb_attributes
 }
-tags = {
-    Environment = "Development"
-  }
 
 
 

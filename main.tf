@@ -16,7 +16,6 @@ ami_id = ami-0f5ee92e2d63afc18
 acl = private
 bucket_prefix = my-statefile-backup
 versioning = true
-tag_environment  = "dev"
 dynamodb_table_name = my-dynamo-db-table-tf
 dynamodb_billing_mode = PAY_PER_REQUEST
 dynamodb_hash_key = my-hash-key

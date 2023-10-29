@@ -15,21 +15,6 @@ dynamodb_billing_mode = PAY_PER_REQUEST
 dynamodb_hash_key = my-hash-key
 dynamodb_range_key = my-range-key
 dynamodb_attributes = dynamodb_attributes
-description = "A list of attribute configurations for the DynamoDB table."
-  type        = list(object({
-    name = string
-    type = string
-  }))
-  default = [
-    {
-      name = "my-hash-key"
-      type = "S"
-    },
-    {
-      name = "my-range-key"
-      type = "N"
-    }
-  ]
 }
 
 module "s3_bucket" {

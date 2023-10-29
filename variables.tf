@@ -4,3 +4,4 @@ variable "tags" {
     Name      = "my-Terraform-Instance"
     Environment = "DEV"
   }
+}

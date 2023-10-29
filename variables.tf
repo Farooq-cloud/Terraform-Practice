@@ -1,8 +1,11 @@
-variable "tags" {
-  description = "A map of tags for the AWS resources."
-  type        = map(string)
-  default     = {
-    Name        = "my-Terraform-Instance"
-    Environment = "DEV"
-  }
+variable "tag" {
+  description = "The Name tag for the resource."
+  type        = string
+  default     = "my-Terraform-Instance"
+}
+
+variable "environment" {
+  description = "The Environment tag for the resource."
+  type        = string
+  default     = "DEV"
 }

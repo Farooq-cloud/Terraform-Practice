@@ -19,6 +19,7 @@ tags {
         environment = "DEV"
         terraform   = "true"
     }
+}
 dynamodb_table_name = my-dynamo-db-table-tf
 dynamodb_billing_mode = PAY_PER_REQUEST
 dynamodb_hash_key = my-hash-key

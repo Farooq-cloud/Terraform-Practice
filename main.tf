@@ -18,7 +18,7 @@ bucket_prefix = my-statefile-backup
 versioning = true
 }
 
-module "dynamodb_table" {
+module "ec2_instance" {
 source = "./modules/ec2_instance"
 dynamodb_table_name = my-dynamo-db-table-tf
 dynamodb_billing_mode = PAY_PER_REQUEST

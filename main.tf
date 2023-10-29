@@ -9,7 +9,7 @@ instance_type = t2.medium
 security_group = Terraform-sgroup-oct-2023
 tags = {
     Name = "my-Terraform-Instance"
-    Environment = "dev"
+    Environment = "DEV"
     terraform = "true"
   }
 ami_id = ami-0f5ee92e2d63afc18

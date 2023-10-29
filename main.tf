@@ -1,8 +1,7 @@
 provider "aws" {
     region = "ap-south1"
 }
-
-module "ec2_instance" {    # module name
+module "ec2_instance" {
 source = "./modules/ec2_instance"
 aws_region = ap-south-1
 key_name = DevOps-Practice

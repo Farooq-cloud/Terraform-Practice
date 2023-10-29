@@ -31,14 +31,6 @@ description = "A list of attribute configurations for the DynamoDB table."
     }
   ]
 }
-variable "tags" {
-    type        = map
-    description = "(Optional) A mapping of tags to assign to the bucket."
-    default     = {
-        environment = "DEV"
-        terraform   = "true"
-    }
-}
 
 module "s3_bucket" {
 source = "./modules/ec2_instance"

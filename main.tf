@@ -30,6 +30,7 @@ description = "A list of attribute configurations for the DynamoDB table."
       type = "N"
     }
   ]
+}
 variable "tags" {
     type        = map
     description = "(Optional) A mapping of tags to assign to the bucket."

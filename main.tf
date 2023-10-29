@@ -8,7 +8,6 @@ key_name = DevOps-Practice
 instance_type = t2.medium
 security_group = Terraform-sgroup-oct-2023
 tag_name = my-Terraform-Instance
-tags = var.tags
 ami_id = ami-0f5ee92e2d63afc18
 acl = private
 bucket_prefix = my-statefile-backup

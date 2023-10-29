@@ -49,7 +49,7 @@ variable "tags" {
         terraform   = "true"
     }
 }
-}
+
 
 
 

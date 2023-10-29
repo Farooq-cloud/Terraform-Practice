@@ -1,4 +1,4 @@
-variable "tag" {
+variable "tags" {
   description = "The Name tag for the resource."
   type        = string
   default     = "my-Terraform-Instance"

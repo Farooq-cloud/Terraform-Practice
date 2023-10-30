@@ -5,3 +5,7 @@ variable "tags" {
     Environment = "DEV"
   }
 }
+variable "tag_name" { 
+    description = "Tag Name of for Ec2 instance" 
+    default     = "my-Terraform-Instance" 
+} 

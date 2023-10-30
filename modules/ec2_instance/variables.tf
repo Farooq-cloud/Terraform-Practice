@@ -66,6 +66,10 @@ variable "dynamodb_attributes" {
 }
 
 variable "tags" {
-    type        = map
-    description = "(Optional) A mapping of tags to assign to the bucket."
+  type        = map(string)
+  description = "A mapping of tags to assign to the resources in the module."
+  default     = {
+    environment = "DEV"
+    terraform   = "true"
+  }
 }

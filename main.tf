@@ -18,11 +18,8 @@ dynamodb_hash_key = my-hash-key
 dynamodb_range_key = my-range-key
 dynamodb_attributes = dynamodb_attributes
 }
-
-module "ec2_instance" {
-source = "./modules/ec2_instance"
 tags = {
     environment = "DEV"
     terraform = "true"
   }
-}
+

@@ -3,20 +3,20 @@ provider "aws" {
 }
 module "ec2_instance" {
 source = "./modules/ec2_instance"
-aws_region = var.aws_region
-key_name = var.key_name
-instance_type = var.instance_type
-security_group = var.security_group
-tag_name = var.tag_name
+aws_region = ap-south-1
+key_name = DevOps-Practice
+instance_type = t2.medium
+security_group = Terraform-sgroup-oct-2023
+tag_name = my-Terraform-Instance
 tags = var.tags
-ami_id = var.ami_id
-acl = var.acl
-bucket_prefix = var.bucket_prefix
-versioning = var.versioning
-dynamodb_table_name = var.dynamodb_table_name
-dynamodb_billing_mode = var.dynamodb_billing_mode
-dynamodb_hash_key = var.dynamodb_hash_key
-dynamodb_range_key = var.my-range-key
-dynamodb_attributes = var.dynamodb_attributes
+ami_id = ami-0f5ee92e2d63afc18
+acl = private
+bucket_prefix = my-statefile-backup
+versioning = true
+dynamodb_table_name = my-dynamo-db-table-tf
+dynamodb_billing_mode = PAY_PER_REQUEST
+dynamodb_hash_key = my-hash-key
+dynamodb_range_key = my-range-key
+dynamodb_attributes = dynamodb_attributes
 }
 

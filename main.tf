@@ -9,10 +9,6 @@ module "aws_dynamodb_table" {
 source = "./modules/ec2_instance"
 }
 
-module "aws_dynamodb_table" {
-source = "./modules/ec2_instance"
-}
-
 module "s3_bucket" {
 source = "./modules/ec2_instance"
 }

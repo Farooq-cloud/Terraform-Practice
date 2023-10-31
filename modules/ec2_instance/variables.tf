@@ -66,6 +66,6 @@ variable "dynamodb_attributes" {
 }
 
 variable "tags" {
-    type        = map
+    type        = map(string)
     description = "(Optional) A mapping of tags to assign to the bucket."
 }

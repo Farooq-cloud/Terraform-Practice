@@ -1,5 +1,8 @@
-provider "aws" {
-    region = "ap-south1"
+variable "common_tags" {
+  description = "Common tags to be applied to resources"
+  type        = map(string)
+  default     = {
+    Environment = "DEV",
+    terraform       = "true"
+  }
 }
-module "ec2_instance" {
-source = "./modules/ec2_instance"

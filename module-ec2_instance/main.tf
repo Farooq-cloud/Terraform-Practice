@@ -12,7 +12,7 @@ resource "aws_vpc" "main" {
 
 #Create security group with firewall rules
 resource "aws_security_group" "Terraform-sg-2023" {
-  name        = var.security_group
+  name        = Terraform-sgroup-oct-2023
   description = "security group for Ec2 instance"
 
   ingress {
@@ -38,17 +38,17 @@ resource "aws_security_group" "Terraform-sg-2023" {
   }
 
   tags= {
-    Name = var.security_group
+    Name = Terraform-sgroup-oct-2023
   }
 }
 
 resource "aws_instance" "my-Terraform-Instance" {
-  ami           = var.ami_id
-  key_name = var.key_name
-  instance_type = var.instance_type
+  ami           = ami-0f5ee92e2d63afc18
+  key_name = DevOps-Practice
+  instance_type = t2.medium
   vpc_security_group_ids = [aws_security_group.Terraform-sg-2023.id]
   tags= {
-    Name = var.tag_name
+    Name = my-Terraform-Instance
   }
 }
 

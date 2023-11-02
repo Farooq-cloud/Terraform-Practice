@@ -12,7 +12,7 @@ resource "aws_vpc" "main" {
 
 #Create security group with firewall rules
 resource "aws_security_group" "Terraform-sg-2023" {
-  name        = Terraform-sgroup-oct-2023
+  name        = var.security_group
   description = "security group for Ec2 instance"
 
   ingress {
@@ -38,35 +38,16 @@ resource "aws_security_group" "Terraform-sg-2023" {
   }
 
   tags= {
-    Name = Terraform-sgroup-oct-2023
+    Name = var.security_group
   }
 }
 
 resource "aws_instance" "my-Terraform-Instance" {
-  ami           = ami-0f5ee92e2d63afc18
-  key_name = DevOps-Practice
-  instance_type = t2.medium
+  ami           = var.ami_id
+  key_name = var.key_name
+  instance_type = var.instance_type
   vpc_security_group_ids = [aws_security_group.Terraform-sg-2023.id]
   tags= {
-    Name = my-Terraform-Instance
+    Name = var.tag_name
   }
-}
-
-# create dynamo table
-
-resource "aws_dynamodb_table" "my-dynamo-db-table-tf" {
-  name           = "my-dynamo-db-table-tf"
-  billing_mode   = "PAY_PER_REQUEST"
-  hash_key       = "my-hash-key"
-  range_key      = "my-range-key"
-
-  attribute {
-    name = "my-hash-key"
-    type = "S"
-  }
-attribute {
-    name = "my-range-key"
-    type = "N"
-  }
-
 }

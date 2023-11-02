@@ -1,13 +1,1 @@
-aws_region = "ap-south1"
-key_name = "DevOps-Practice"
-instance_type = "t2.medium"
-security_group = "Terraform-sgroup-oct-2023"
-tag_name = "my-Terraform-Instance"
-ami_id = "ami-0f5ee92e2d63afc18"  # Replace with the actual AMI ID
-versioning = true
-acl = "private"
-bucket_prefix = "my-bucket-prefix"
-dynamodb_table_name = "my-dynamo-db-table-tf"
-dynamodb_billing_mode = "PAY_PER_REQUEST"
-dynamodb_hash_key = "hash-key-name"
-dynamodb_range_key = "my-range-key"
+

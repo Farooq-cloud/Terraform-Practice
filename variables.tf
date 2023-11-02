@@ -42,7 +42,7 @@ variable "bucket_prefix" {
     default     = "my-statefile-backup"
 }
 
-ariable "table_name" {
+variable "table_name" {
   description = "The name of the DynamoDB table."
   default     = "my-dynamo-db-table-tf"
 }

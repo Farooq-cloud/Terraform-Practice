@@ -61,12 +61,12 @@ resource "aws_dynamodb_table" "my-dynamo-db-table-tf" {
   range_key      = var.range_key
 
   attribute {
-    name = var.attributes
-    type = var.attributes
+    name = "my-hash-key"
+    type = "S"
   }
 attribute {
-    name = var.attributes
-    type = var.attributes
+    name = "my-range-key"
+    type = "N"
   }
 
 }

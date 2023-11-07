@@ -45,7 +45,6 @@ resource "aws_security_group" "Terraform-sg" {
 }
 
 resource "aws_instance" "my-Terraform-Instance" {
-name = "my-Terraform-Instance"
 ami           = "ami-0287a05f0ef0e9d9a"
 key_name = "DevOps-Practice"
 instance_type = "t2.medium"

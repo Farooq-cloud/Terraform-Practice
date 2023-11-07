@@ -1,17 +1,19 @@
 variable "bucket_prefix" {
-  description = "The prefix for the S3 bucket name."
+  description = "Prefix for the S3 bucket name"
+  type        = string
 }
 
 variable "acl" {
-  description = "The access control list for the S3 bucket."
+  description = "Access control list for the S3 bucket"
+  type        = string
 }
 
 variable "versioning" {
-  description = "Enable or disable versioning for the S3 bucket."
+  description = "Enable versioning for the S3 bucket"
   type        = bool
 }
 
 variable "tags" {
-  description = "Tags to apply to the S3 bucket."
+  description = "Tags for the S3 bucket"
   type        = map(string)
 }

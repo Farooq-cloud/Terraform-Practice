@@ -40,7 +40,7 @@ resource "aws_security_group" "Terraform-sg-2023" {
   }
 
   tags= {
-    Name = Terraform-sg-2023
+    name_prefix = Terraform-sg-2023
   }
 }
 

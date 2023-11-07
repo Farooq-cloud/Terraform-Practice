@@ -1,6 +1,6 @@
 aws_region = "ap-south-1"
 
-ami = "ami-0f5ee92e2d63afc18"
+ami = "ami-0287a05f0ef0e9d9a"
 key_name = "DevOps-Practice"
 instance_type = "t2.medium"
 

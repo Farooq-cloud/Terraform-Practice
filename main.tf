@@ -13,8 +13,8 @@ resource "aws_vpc" "main" {
 }
 
 #Create security group with firewall rules
-resource "aws_security_group" "Terraform-sg-2023" {
-  name_prefix        = Terraform-sg-2023
+resource "aws_security_group" "Terraform-sg" {
+  name        = Terraform-sg
   description = "security group for Ec2 instance"
 
   ingress {
@@ -40,7 +40,7 @@ resource "aws_security_group" "Terraform-sg-2023" {
   }
 
   tags= {
-    name_prefix = Terraform-sg-2023
+    Name = Terraform-sg
   }
 }
 

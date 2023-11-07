@@ -48,7 +48,7 @@ resource "aws_instance" "my-Terraform-Instance" {
   ami           = "ami-0f5ee92e2d63afc18"
   key_name = "DevOps-Practice"
   instance_type = "t2.medium"
-  vpc_security_group_ids = [aws_security_group.Terraform-sg-2023.id]
+  vpc_security_group_ids = [aws_security_group.Terraform-sg.id]
 }
 
 # create dynamo table

@@ -4,7 +4,7 @@ pipeline {
     environment {
         
         AWS_ECR_REGION = 'ap-south-1' // Replace with your AWS region for ECR
-        AWS_CREDENTIALS = credentials('your-credentials-id')
+        // AWS_CREDENTIALS = credentials('your-credentials-id')
         DOCKER_IMAGE_NAME = 'farooq/httpd-custom' // Replace with your Docker image name
     }
 

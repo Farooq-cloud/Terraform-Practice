@@ -5,7 +5,6 @@ pipeline {
         
         AWS_ECR_REGION = 'ap-south-1' // Replace with your AWS region for ECR
         // AWS_CREDENTIALS = credentials('your-credentials-id')
-        DOCKER_IMAGE_NAME = 'farooq/httpd-custom' // Replace with your Docker image name
     }
 
     stages {
@@ -18,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build(DOCKER_IMAGE_NAME, "-f Dockerfile .")
+                    sh 'sudo docker build -t farooq/http-custom .'
                 }
             }
         }

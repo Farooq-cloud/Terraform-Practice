@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t http-custom .'
+                    sh 'docker build -t farooq/httpd-custom .'
                 }
             }
         }

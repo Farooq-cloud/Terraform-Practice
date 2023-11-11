@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t farooq/http-custom .'
+                    sh 'docker build -t http-custom .'
                 }
             }
         }
@@ -25,8 +25,8 @@ pipeline {
         stage('Push to ECR') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'ECR', variable: 'AWS_CREDENTIALS')]) {
-                        docker.withRegistry('https://097348731047.dkr.ecr.ap-south-1.amazonaws.com', 'ecr:' + ECR_CREDS) {
+                    withCredentials([string(credentialsId: 'ECR-CREDS', variable: 'AWS_CREDENTIALS')]) {
+                        docker.withRegistry('https://097348731047.dkr.ecr.ap-south-1.amazonaws.com', 'ecr:' + ECR-CREDS) {
                             docker.image(DOCKER_IMAGE_NAME).push()
                         }
                     }
